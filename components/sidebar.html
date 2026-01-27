@@ -1,0 +1,80 @@
+<aside class="sidebar">
+    <nav class="sidebar-nav">
+
+        <!-- ADMIN -->
+<div class="sidebar-group" data-role="admin">
+            <a href="/dashboard/admin/manage-assessments.html" class="nav-link">Assessments</a>
+            <a href="/dashboard/admin/telecaller-performance.html" class="nav-link">Telecaller Performance</a>
+            <a href="/dashboard/admin/assessor-performance.html" class="nav-link">Assessor Performance</a>
+            <a href="/dashboard/admin/assessee-reports.html" class="nav-link">Assessee Reports</a>
+
+    <hr class="sidebar-divider">
+
+    <strong class="sidebar-title">Content</strong>
+
+    <a href="/dashboard/admin/content-dashboard.html" class="nav-link">Content Overview</a>
+    <a href="/dashboard/admin/blogs.html" class="nav-link">Blogs</a>
+    <a href="/dashboard/admin/announcements.html" class="nav-link">Announcements</a>
+    <a href="/dashboard/admin/pages.html" class="nav-link">Pages</a>
+
+    <hr class="sidebar-divider">
+
+    <a href="/dashboard/admin/system-reports.html" class="nav-link">System Reports</a>
+    <a href="/dashboard/admin/activity-logs.html" class="nav-link">Activity Logs</a>
+    <a href="/dashboard/admin/settings.html" class="nav-link">Settings</a>
+
+</div>
+
+
+        <!-- TELECALLER -->
+        <div class="sidebar-group" data-role="telecaller">
+            <a href="/dashboard/telecaller/telecaller-dashboard.html" class="nav-link">Dashboard</a>
+            <a href="/dashboard/telecaller/leads.html" class="nav-link">Leads</a>
+            <a href="/dashboard/telecaller/call-logs.html" class="nav-link">Call Logs</a>
+            <a href="/dashboard/telecaller/follow-ups.html" class="nav-link">Follow Ups</a>
+            <a href="/dashboard/telecaller/daily-targets.html" class="nav-link">Daily Targets</a>
+                        <a href="/dashboard/telecaller/notifications.html" class="nav-link">Notifications</a>
+
+            <a href="/dashboard/telecaller/performance.html" class="nav-link">Performance</a>
+        </div>
+
+        <!-- ASSESSOR -->
+        <div class="sidebar-group" data-role="assessor">
+            <a href="/dashboard/assessor/assessor-dashboard.html" class="nav-link">Dashboard</a>
+            <a href="/dashboard/assessor/assigned-assessments.html" class="nav-link">Assigned Assessments</a>
+            <a href="/dashboard/assessor/submitted-reviews.html" class="nav-link">Submitted Reviews</a>
+            <a href="/dashboard/assessor/performance.html" class="nav-link">Performance</a>
+            <a href="/dashboard/assessor/reports.html" class="nav-link">Reports</a>
+        </div>
+
+        <!-- ASSESSEE -->
+        <div class="sidebar-group" data-role="assessee">
+            <a href="/dashboard/assessee/assessee-dashboard.html" class="nav-link">Dashboard</a>
+            <a href="/dashboard/assessee/submit-assessment.html" class="nav-link">Submit Assessment</a>
+            <a href="/dashboard/assessee/uploaded-documents.html" class="nav-link">Documents</a>
+            <a href="/dashboard/assessee/assessment-history.html" class="nav-link">History</a>
+            <a href="/dashboard/assessee/results.html" class="nav-link">Results</a>
+            <a href="/dashboard/assessee/progress.html" class="nav-link">Progress</a>
+        </div>
+
+        <!-- JURY -->
+        <div class="sidebar-group" data-role="jury">
+            <a href="/dashboard/jury/jury-dashboard.html" class="nav-link">Dashboard</a>
+            <a href="/dashboard/jury/final-reviews.html" class="nav-link">Final Reviews</a>
+            <a href="/dashboard/jury/decision-history.html" class="nav-link">Decision History</a>
+            <a href="/dashboard/jury/reports.html" class="nav-link">Reports</a>
+        </div>
+
+    </nav>
+</aside>
+
+
+<script>
+    (function () {
+        const role = localStorage.getItem("lp_role");
+        document.querySelectorAll(".sidebar-group").forEach(group => {
+            group.style.display =
+                group.getAttribute("data-role") === role ? "block" : "none";
+        });
+    })();
+</script>

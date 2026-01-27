@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Reports</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/assets/css/charts.css">
+    <link rel="stylesheet" href="/assets/css/tables.css">
+
+    <!-- JS -->
+    <script src="/assets/js/auth.js"></script>
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+    <script src="/assets/js/charts.js"></script>
+    <script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('admin')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+<h1>System Reports</h1>
+<p class="greeting-sub">Platform health & usage</p>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-label">Total Requests</div>
+        <div class="stat-value">128,430</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Avg Response Time</div>
+        <div class="stat-value">240ms</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Error Rate</div>
+        <div class="stat-value">0.3%</div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="bar-chart">
+        <div class="bar" style="height:150px"></div>
+        <div class="bar" style="height:190px"></div>
+        <div class="bar" style="height:120px"></div>
+        <div class="bar" style="height:210px"></div>
+    </div>
+</div>
+    </main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+    loadComponent("navbar", "/components/navbar.html");
+    loadComponent("sidebar", "/components/sidebar.html");
+    loadComponent("footer", "/components/footer.html");
+</script>
+
+</body>
+</html>

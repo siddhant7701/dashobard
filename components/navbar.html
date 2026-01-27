@@ -1,0 +1,58 @@
+<!-- ===============================
+     TOP NAVBAR
+=============================== -->
+
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+
+<header class="top-nav">
+    <div class="nav-container">
+
+        <!-- LEFT -->
+        <div class="nav-left">
+            <a href="/index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path fill="white"
+                              d="M3 13h8V3H3v10zm10 8h8V3h-8v18zM3 21h8v-6H3v6z" />
+                    </svg>
+                </div>
+                <span>Dashboard</span>
+            </a>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+
+            <!-- THEME -->
+            <div class="theme-toggle">
+                <button class="theme-btn theme-btn-snow"
+                        onclick="setTheme('snow')">☀️</button>
+                <button class="theme-btn theme-btn-carbon"
+                        onclick="setTheme('carbon')">🌙</button>
+            </div>
+
+            <!-- USER -->
+            <div class="user-menu">
+                <div class="user-avatar" id="userAvatarBox">
+                    <span id="userAvatar">U</span>
+                </div>
+                <div class="user-name">
+                    <span id="userRole">User</span>
+                </div>
+            </div>
+
+            <!-- LOGOUT -->
+            <button class="btn-logout" onclick="logout()">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                          d="M16 17v-2H7V9h9V7l5 5-5 5z
+                             M3 3h10v2H3v14h10v2H3
+                             c-1.1 0-2-.9-2-2V5
+                             c0-1.1.9-2 2-2z" />
+                </svg>
+            </button>
+
+        </div>
+    </div>
+</header>

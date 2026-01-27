@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reports</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/charts.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<!-- JS -->
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+<script src="/assets/js/charts.js"></script>
+<script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('jury')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+<div class="page-header">
+    <h1>Jury Reports</h1>
+    <p class="greeting-sub">
+        Decision analytics and monthly summaries
+    </p>
+</div>
+
+<section class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-label">Total Decisions</div>
+        <div class="stat-value">146</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Approval Rate</div>
+        <div class="stat-value">82%</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Rejection Rate</div>
+        <div class="stat-value">18%</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Avg Decision Time</div>
+        <div class="stat-value">1.4 days</div>
+    </div>
+</section>
+
+<section class="card">
+    <div class="card-header">
+        <h3 class="card-title">Monthly Summary</h3>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Approved</th>
+                <th>Rejected</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>January 2026</td>
+                <td>19</td>
+                <td>4</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>December 2025</td>
+                <td>22</td>
+                <td>6</td>
+                <td>28</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    </main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

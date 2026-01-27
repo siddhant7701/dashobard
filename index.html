@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- Auth JS -->
+    <script src="/assets/js/auth.js"></script>
+</head>
+
+<body>
+
+    <!-- Full Page Loader -->
+    <div style="
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:1rem;
+        background:var(--bg-secondary);
+    ">
+
+        <!-- Logo -->
+        <div style="
+            width:56px;
+            height:56px;
+            border-radius:12px;
+            background:var(--accent);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            font-weight:700;
+            font-size:1.25rem;
+        ">
+            UI
+        </div>
+
+        <!-- App Name -->
+        <h1 style="
+            font-size:1.25rem;
+            font-weight:600;
+            color:var(--text-primary);
+        ">
+            Dashboard UI
+        </h1>
+
+        <!-- Subtitle -->
+        <p style="
+            font-size:0.875rem;
+            color:var(--text-secondary);
+        ">
+            Loading your workspace…
+        </p>
+
+        <!-- Spinner -->
+        <div style="
+            margin-top:0.5rem;
+            width:32px;
+            height:32px;
+            border:3px solid var(--border-color);
+            border-top-color:var(--accent);
+            border-radius:50%;
+            animation:spin 1s linear infinite;
+        "></div>
+    </div>
+
+    <style>
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+
+    <!-- Redirect Logic -->
+    <script>
+        (function () {
+            const loggedIn = localStorage.getItem("lp_logged_in");
+            const role = localStorage.getItem("lp_role");
+
+            setTimeout(() => {
+                if (loggedIn === "true" && role && ROLE_ROUTES[role]) {
+                    window.location.href = ROLE_ROUTES[role];
+                } else {
+                    window.location.href = "/auth/login.html";
+                }
+            }, 600); // small delay for UX
+        })();
+    </script>
+
+</body>
+</html>

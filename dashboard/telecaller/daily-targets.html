@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Daily Targets</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/charts.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<!-- JS -->
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+<script src="/assets/js/charts.js"></script>
+<script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('telecaller')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+<div class="page-header">
+    <h1>Daily Targets</h1>
+    <p class="greeting-sub">
+        Your performance targets for today
+    </p>
+</div>
+
+<section class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-label">Calls Target</div>
+        <div class="stat-value">60</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Calls Completed</div>
+        <div class="stat-value">41</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Conversions Target</div>
+        <div class="stat-value">6</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Conversions Achieved</div>
+        <div class="stat-value">5</div>
+    </div>
+</section>
+
+<section class="card">
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width:68%"></div>
+    </div>
+    <p style="margin-top:0.75rem;">68% of daily target achieved</p>
+</section>
+    </main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

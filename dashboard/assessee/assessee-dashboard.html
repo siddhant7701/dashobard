@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assessee Dashboard</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/charts.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<!-- JS -->
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+<script src="/assets/js/charts.js"></script>
+<script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('assessee')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+<div class="page-header">
+    <h1>My Dashboard</h1>
+    <p class="greeting-sub">
+        Track your assessment progress and next steps
+    </p>
+</div>
+
+<!-- STATUS CARDS -->
+<section class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-label">Current Assessment</div>
+        <div class="stat-value">Safety Audit</div>
+        <div class="stat-change positive">In Progress</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Documents Uploaded</div>
+        <div class="stat-value">5 / 8</div>
+        <div class="stat-change negative">3 pending</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Review Status</div>
+        <div class="stat-value">Pending</div>
+        <div class="stat-change">Waiting for assessor</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Overall Progress</div>
+        <div class="stat-value">62%</div>
+        <div class="stat-change positive">On track</div>
+    </div>
+</section>
+
+<!-- CURRENT ASSESSMENT -->
+<section class="two-col">
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Assessment Summary</h3>
+        </div>
+
+        <ul class="simple-list">
+            <li><strong>Assessment Type:</strong> Safety Audit</li>
+            <li><strong>Submitted On:</strong> 18 Jan 2026</li>
+            <li><strong>Assigned Assessor:</strong> Amit Kumar</li>
+            <li><strong>Status:</strong> Under Review</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Quick Actions</h3>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+            <a href="/dashboard/assessee/submit-assessment.html" class="btn btn-primary">
+                Submit / Update Assessment
+            </a>
+            <a href="/dashboard/assessee/uploaded-documents.html" class="btn btn-secondary">
+                Upload Documents
+            </a>
+            <a href="/dashboard/assessee/progress.html" class="btn btn-ghost">
+                View Progress
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<!-- NOTIFICATIONS -->
+<section class="card">
+    <div class="card-header">
+        <h3 class="card-title">Recent Notifications</h3>
+    </div>
+
+    <ul class="simple-list">
+        <li>📄 New document requested by assessor</li>
+        <li>⏳ Assessment moved to review stage</li>
+        <li>ℹ️ Profile information verified</li>
+    </ul>
+</section>
+    </main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

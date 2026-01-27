@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Notifications</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/charts.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<!-- JS -->
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+<script src="/assets/js/charts.js"></script>
+<script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('telecaller')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+<div class="page-header">
+    <h1>Notifications</h1>
+    <p class="greeting-sub">
+        Updates and instructions from admin
+    </p>
+</div>
+
+<section class="card">
+    <ul class="simple-list">
+        <li>📢 New calling script released</li>
+        <li>⚠️ High-priority leads assigned</li>
+        <li>ℹ️ Daily targets updated</li>
+    </ul>
+</section>
+    </main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

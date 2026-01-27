@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Call Logs</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/charts.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<!-- JS -->
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+<script src="/assets/js/charts.js"></script>
+<script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('telecaller')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+<div class="page-header">
+    <h1>Call Logs</h1>
+    <p class="greeting-sub">
+        Record and review all call activity
+    </p>
+</div>
+
+<section class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Lead</th>
+                <th>Call Time</th>
+                <th>Outcome</th>
+                <th>Next Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ABC Industries</td>
+                <td>24 Jan 2026, 11:20 AM</td>
+                <td><span class="badge badge-green">Interested</span></td>
+                <td>Schedule Follow-up</td>
+            </tr>
+
+            <tr>
+                <td>Omega Corp</td>
+                <td>24 Jan 2026, 10:05 AM</td>
+                <td><span class="badge badge-red">No Response</span></td>
+                <td>Retry Tomorrow</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    </main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

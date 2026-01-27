@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Announcements</title>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+</head>
+
+<body onload="protectPage('admin')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+<div id="sidebar"></div>
+
+<main class="main-content">
+    <h1>Announcements</h1>
+    <p class="greeting-sub">System-wide notices</p>
+
+    <div class="card">
+        <ul class="simple-list">
+            <li><strong>System Maintenance:</strong> 25 Jan, 12:00–2:00 AM</li>
+            <li><strong>New Policy Update:</strong> Review guidelines updated</li>
+            <li><strong>Feature Release:</strong> Content dashboard added</li>
+        </ul>
+    </div>
+</main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

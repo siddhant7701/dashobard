@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assessment History</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/charts.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<!-- JS -->
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+<script src="/assets/js/charts.js"></script>
+<script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('assessee')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+<div class="page-header">
+    <h1>Assessment History</h1>
+    <p class="greeting-sub">
+        View all your past and ongoing assessments
+    </p>
+</div>
+
+<section class="card">
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Assessment Type</th>
+                    <th>Submitted On</th>
+                    <th>Status</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Safety Audit</td>
+                    <td>18 Jan 2026</td>
+                    <td><span class="badge badge-orange">Under Review</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Fire Safety</td>
+                    <td>12 Nov 2025</td>
+                    <td><span class="badge badge-green">Completed</span></td>
+                    <td><span class="badge badge-green">Approved</span></td>
+                </tr>
+                <tr>
+                    <td>Compliance Check</td>
+                    <td>04 Aug 2025</td>
+                    <td><span class="badge badge-red">Rejected</span></td>
+                    <td><span class="badge badge-red">Failed</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+    </main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

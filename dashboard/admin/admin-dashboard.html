@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css?v=1">
+<link rel="stylesheet" href="/assets/css/dashboard.css?v=1">
+<link rel="stylesheet" href="/assets/css/charts.css?v=1">
+<link rel="stylesheet" href="/assets/css/tables.css?v=1">
+
+
+    <!-- JS -->
+    <script src="/assets/js/auth.js"></script>
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+    <script src="/assets/js/charts.js"></script>
+    <script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('admin')">
+
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+<!-- APP LAYOUT -->
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <div id="sidebar"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- PAGE HEADER -->
+        <div class="page-header">
+            <h1 class="greeting">Admin Dashboard</h1>
+            <p class="greeting-sub">System overview & performance summary</p>
+        </div>
+
+        <!-- STATS -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Users</div>
+                <div class="stat-value">1,248</div>
+                <div class="stat-change positive">+12% this month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Active Assessments</div>
+                <div class="stat-value">342</div>
+                <div class="stat-change positive">+8%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Pending Reviews</div>
+                <div class="stat-value">87</div>
+                <div class="stat-change negative">-5%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Completion Rate</div>
+                <div class="stat-value">92%</div>
+                <div class="stat-change positive">↑ stable</div>
+            </div>
+        </div>
+
+        <!-- CHARTS -->
+        <div class="two-col">
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Monthly Assessments</div>
+                        <div class="card-subtitle">Last 6 months</div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <div class="bar-chart">
+                        <div class="bar current" style="height:120px"></div>
+                        <div class="bar current" style="height:150px"></div>
+                        <div class="bar current" style="height:180px"></div>
+                        <div class="bar current" style="height:140px"></div>
+                        <div class="bar current" style="height:200px"></div>
+                        <div class="bar current" style="height:170px"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Role Distribution</div>
+                </div>
+                <div class="chart-container">
+                    <ul>
+                        <li>Admins: 12</li>
+                        <li>Telecallers: 124</li>
+                        <li>Assessors: 86</li>
+                        <li>Assessees: 1,026</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TABLE -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Recent Activity</div>
+            </div>
+            <div class="table-container">
+                <table id="activityTable">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rahul Sharma</td>
+                            <td>Telecaller</td>
+                            <td>Lead Follow-up</td>
+                            <td><span class="badge badge-green">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Anjali Verma</td>
+                            <td>Assessor</td>
+                            <td>Assessment Review</td>
+                            <td><span class="badge badge-orange">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>Amit Singh</td>
+                            <td>Assessee</td>
+                            <td>Document Upload</td>
+                            <td><span class="badge badge-blue">Submitted</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- LOAD COMPONENTS -->
+<script>
+    loadComponent("navbar", "/components/navbar.html");
+    loadComponent("sidebar", "/components/sidebar.html");
+    loadComponent("footer", "/components/footer.html");
+</script>
+
+</body>
+</html>

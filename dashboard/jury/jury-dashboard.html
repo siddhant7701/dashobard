@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Jury Dashboard</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/charts.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<!-- JS -->
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+<script src="/assets/js/charts.js"></script>
+<script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('jury')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+<div class="page-header">
+    <h1>Jury Dashboard</h1>
+    <p class="greeting-sub">
+        Final decision overview and pending approvals
+    </p>
+</div>
+
+<section class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-label">Pending Final Reviews</div>
+        <div class="stat-value">7</div>
+        <div class="stat-change negative">Requires attention</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Approved This Month</div>
+        <div class="stat-value">19</div>
+        <div class="stat-change positive">Finalized</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Rejected This Month</div>
+        <div class="stat-value">4</div>
+        <div class="stat-change">Quality enforced</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-label">Avg Decision Time</div>
+        <div class="stat-value">1.2 days</div>
+        <div class="stat-change positive">Efficient</div>
+    </div>
+</section>
+
+<section class="card">
+    <div class="card-header">
+        <h3 class="card-title">Pending Jury Actions</h3>
+    </div>
+
+    <ul class="simple-list">
+        <li>⚠️ Safety Audit – ABC Industries</li>
+        <li>⚠️ Fire Safety – Delta Manufacturing</li>
+        <li>⚠️ Compliance Review – Omega Corp</li>
+    </ul>
+</section>
+    </main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

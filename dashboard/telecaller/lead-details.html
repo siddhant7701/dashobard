@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lead Details</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/charts.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<!-- JS -->
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+<script src="/assets/js/charts.js"></script>
+<script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('telecaller')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+<div class="page-header">
+    <h1>Lead Details</h1>
+    <p class="greeting-sub">
+        Complete information about the selected lead
+    </p>
+</div>
+
+<section class="card">
+    <ul class="simple-list">
+        <li><strong>Company:</strong> ABC Industries</li>
+        <li><strong>Assessment:</strong> Safety Audit</li>
+        <li><strong>Contact Person:</strong> Rajesh Kumar</li>
+        <li><strong>Phone:</strong> +91 98XXXXXX12</li>
+        <li><strong>Status:</strong> Interested</li>
+    </ul>
+</section>
+
+<section class="card">
+    <div class="form-group">
+        <label class="form-label">Call Outcome</label>
+        <select class="form-input">
+            <option>Interested</option>
+            <option>Not Interested</option>
+            <option>Call Back Later</option>
+            <option>No Response</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Remarks</label>
+        <textarea class="form-input" rows="3"></textarea>
+    </div>
+
+    <button class="btn btn-primary">Save Call Log</button>
+</section>
+    </main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

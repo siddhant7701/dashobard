@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assessee Reports</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/assets/css/tables.css">
+
+    <!-- JS -->
+    <script src="/assets/js/auth.js"></script>
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+    <script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('admin')">
+
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <div id="sidebar"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <div class="page-header">
+            <h1>Assessee Reports</h1>
+            <p class="greeting-sub">
+                Assessment submissions, completion status & results overview
+            </p>
+        </div>
+
+        <!-- SUMMARY STATS -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Assessees</div>
+                <div class="stat-value">342</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-label">Completed</div>
+                <div class="stat-value">218</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-label">Pending</div>
+                <div class="stat-value">97</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-label">Rejected</div>
+                <div class="stat-value">27</div>
+            </div>
+        </section>
+
+        <!-- REPORT TABLE -->
+        <section class="card">
+            <div class="card-header">
+                <h3 class="card-title">Assessee Assessment Status</h3>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Assessee Name</th>
+                            <th>Assessment Type</th>
+                            <th>Submitted</th>
+                            <th>Reviewed</th>
+                            <th>Final Status</th>
+                            <th>Last Updated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ABC Industries</td>
+                            <td>Safety Audit</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td><span class="badge badge-green">Approved</span></td>
+                            <td>22 Jan 2026</td>
+                        </tr>
+
+                        <tr>
+                            <td>XYZ Pvt Ltd</td>
+                            <td>Compliance Check</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td><span class="badge badge-orange">Under Review</span></td>
+                            <td>23 Jan 2026</td>
+                        </tr>
+
+                        <tr>
+                            <td>Delta Manufacturing</td>
+                            <td>Fire Safety</td>
+                            <td>No</td>
+                            <td>—</td>
+                            <td><span class="badge badge-red">Pending Submission</span></td>
+                            <td>—</td>
+                        </tr>
+
+                        <tr>
+                            <td>Omega Corp</td>
+                            <td>Environmental Audit</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td><span class="badge badge-red">Rejected</span></td>
+                            <td>21 Jan 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- COMPONENT LOADERS -->
+<script>
+    loadComponent("navbar", "/components/navbar.html");
+    loadComponent("sidebar", "/components/sidebar.html");
+    loadComponent("footer", "/components/footer.html");
+</script>
+
+</body>
+</html>

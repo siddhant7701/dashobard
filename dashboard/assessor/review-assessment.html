@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Review Assessment</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/charts.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<!-- JS -->
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+<script src="/assets/js/charts.js"></script>
+<script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('assessor')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+<div class="page-header">
+    <h1>Review Assessment</h1>
+    <p class="greeting-sub">
+        Evaluate submitted documents and provide your review
+    </p>
+</div>
+
+<section class="card">
+    <ul class="simple-list">
+        <li><strong>Assessee:</strong> ABC Industries</li>
+        <li><strong>Assessment Type:</strong> Safety Audit</li>
+        <li><strong>Submitted On:</strong> 18 Jan 2026</li>
+    </ul>
+</section>
+
+<section class="card">
+    <div class="card-header">
+        <h3 class="card-title">Review Decision</h3>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Decision</label>
+        <select class="form-input">
+            <option>Approve</option>
+            <option>Request Changes</option>
+            <option>Reject</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Remarks</label>
+        <textarea class="form-input" rows="4"
+            placeholder="Add review comments"></textarea>
+    </div>
+
+    <div style="display:flex; justify-content:flex-end;">
+        <button class="btn btn-primary">Submit Review</button>
+    </div>
+</section>
+    </main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

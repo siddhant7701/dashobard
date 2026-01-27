@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assessor Performance</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/assets/css/charts.css">
+    <link rel="stylesheet" href="/assets/css/tables.css">
+
+    <!-- JS -->
+    <script src="/assets/js/auth.js"></script>
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+    <script src="/assets/js/charts.js"></script>
+    <script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('admin')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+    <div id="sidebar"></div>
+
+    <main class="main-content">
+<h1>Assessor Performance</h1>
+<p class="greeting-sub">Review efficiency & accuracy</p>
+
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Assessor</th>
+                <th>Reviews</th>
+                <th>Avg Time</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Amit Kumar</td>
+                <td>54</td>
+                <td>2.1 days</td>
+                <td>⭐ 4.6</td>
+            </tr>
+            <tr>
+                <td>Pooja Mehta</td>
+                <td>41</td>
+                <td>2.8 days</td>
+                <td>⭐ 4.2</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    </main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+    loadComponent("navbar", "/components/navbar.html");
+    loadComponent("sidebar", "/components/sidebar.html");
+    loadComponent("footer", "/components/footer.html");
+</script>
+
+</body>
+</html>

@@ -62,8 +62,8 @@ textarea {
     --text-primary: #1e293b;
     --text-secondary: #64748b;
 
-    --accent: #38bdf8;
-    --accent-hover: #0ea5e9;
+    --accent: #4054B2;
+    --accent-hover: #6074cb;
     --accent-light: rgba(56, 189, 248, 0.12);
 
     --success: #22c55e;
@@ -90,7 +90,7 @@ body.carbon {
     --text-primary: #f5f5f5;
     --text-secondary: #a3a3a3;
 
-    --accent: #38bdf8;
+    --accent:#4054B2;
     --accent-hover: #7dd3fc;
     --accent-light: rgba(56, 189, 248, 0.18);
 

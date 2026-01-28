@@ -25,7 +25,139 @@
     <div id="sidebar"></div>
 
     <main class="main-content">
-        <!-- PAGE CONTENT -->
+<!-- ===============================
+     PAGE HEADER
+=============================== -->
+<div class="page-header">
+    <h1 class="greeting">Submit Assessment</h1>
+    <p class="greeting-sub">
+        Upload your assessment details and required documents for evaluation
+    </p>
+</div>
+
+<!-- ===============================
+     ASSESSMENT INFO
+=============================== -->
+<div class="card">
+    <div class="card-header">
+        <div>
+            <h3 class="card-title">Assessment Information</h3>
+            <p class="card-subtitle">Basic details about your assessment</p>
+        </div>
+    </div>
+
+    <div class="two-col">
+        <div class="form-group">
+            <label class="form-label">Assessment Title</label>
+            <input
+                type="text"
+                class="form-input"
+                placeholder="Enter assessment title" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Assessment Category</label>
+            <select class="form-input">
+                <option value="">Select category</option>
+                <option>Safety Compliance</option>
+                <option>Operational Excellence</option>
+                <option>Environmental Standards</option>
+                <option>Quality Management</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Organization / Company Name</label>
+            <input
+                type="text"
+                class="form-input"
+                placeholder="Your organization name" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Assessment Year</label>
+            <select class="form-input">
+                <option>2026</option>
+                <option>2025</option>
+                <option>2024</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<!-- ===============================
+     DESCRIPTION
+=============================== -->
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Assessment Description</h3>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Brief Description</label>
+        <textarea
+            class="form-input"
+            rows="5"
+            placeholder="Explain your assessment, objectives, and scope"></textarea>
+    </div>
+</div>
+
+<!-- ===============================
+     DOCUMENT UPLOAD
+=============================== -->
+<div class="card">
+    <div class="card-header">
+        <div>
+            <h3 class="card-title">Upload Documents</h3>
+            <p class="card-subtitle">Accepted formats: PDF, DOCX, XLSX</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Primary Assessment File</label>
+        <input type="file" class="form-input" />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Supporting Documents (optional)</label>
+        <input type="file" class="form-input" multiple />
+    </div>
+
+    <div class="badge badge-blue">
+        Files will be reviewed by the assigned assessor
+    </div>
+</div>
+
+<!-- ===============================
+     DECLARATION
+=============================== -->
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Declaration</h3>
+    </div>
+
+    <div class="form-group">
+        <label style="display:flex; align-items:center; gap:0.5rem;">
+            <input type="checkbox" />
+            <span>
+                I confirm that the information provided is accurate and complete
+            </span>
+        </label>
+    </div>
+</div>
+
+<!-- ===============================
+     ACTION BUTTONS
+=============================== -->
+<div style="display:flex; justify-content:flex-end; gap:1rem; margin-top:1.5rem;">
+    <button class="btn btn-secondary">
+        Save as Draft
+    </button>
+
+    <button class="btn btn-primary">
+        Submit Assessment
+    </button>
+</div>
     </main>
 </div>
 

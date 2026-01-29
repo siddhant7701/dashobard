@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assessment Details</title>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+</head>
+
+<body onload="protectPage('assessor')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+<div id="sidebar"></div>
+
+<main class="main-content">
+
+<div class="page-header">
+    <h1>Assessment Details</h1>
+    <p class="greeting-sub">View assessment submission before starting review</p>
+</div>
+
+<section class="card">
+    <ul class="simple-list">
+        <li><strong>Assessee:</strong> ABC Industries</li>
+        <li><strong>Industry:</strong> Manufacturing</li>
+        <li><strong>Assessment Type:</strong> Safety Audit</li>
+        <li><strong>Submission Round:</strong> 1st Submission</li>
+        <li><strong>Date:</strong> 18 Jan 2026</li>
+    </ul>
+</section>
+
+<section class="card">
+    <div class="card-header">
+        <h3 class="card-title">Submitted Documents</h3>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Type</th>
+                <th>Uploaded On</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Safety_Report.pdf</td>
+                <td>PDF</td>
+                <td>18 Jan 2026</td>
+                <td><button class="btn btn-small">View</button></td>
+            </tr>
+            <tr>
+                <td>Risk_Analysis.xlsx</td>
+                <td>Excel</td>
+                <td>18 Jan 2026</td>
+                <td><button class="btn btn-small">View</button></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<div style="text-align:right;">
+    <a href="review-assessment.html" class="btn btn-primary">Start Review</a>
+</div>
+
+</main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

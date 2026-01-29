@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scoring Guidelines</title>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+</head>
+
+<body onload="protectPage('assessor')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+<div id="sidebar"></div>
+
+<main class="main-content">
+
+<div class="page-header">
+    <h1>Scoring Guidelines</h1>
+    <p class="greeting-sub">Reference guide for marks, stars, and award levels</p>
+</div>
+
+<section class="card">
+<table>
+    <thead>
+        <tr>
+            <th>Score %</th>
+            <th>Stars</th>
+            <th>Award Level</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>90% – 100%</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>Gold</td>
+            <td>Excellent compliance & best practices</td>
+        </tr>
+        <tr>
+            <td>75% – 89%</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>Silver</td>
+            <td>Strong compliance with minor gaps</td>
+        </tr>
+        <tr>
+            <td>60% – 74%</td>
+            <td>⭐⭐⭐</td>
+            <td>Bronze</td>
+            <td>Acceptable compliance</td>
+        </tr>
+        <tr>
+            <td>Below 60%</td>
+            <td>⭐⭐</td>
+            <td>No Award</td>
+            <td>Improvements required</td>
+        </tr>
+    </tbody>
+</table>
+</section>
+
+</main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

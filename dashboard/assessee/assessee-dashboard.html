@@ -27,38 +27,64 @@
 
     <main class="main-content">
 <div class="page-header">
-    <h1>My Dashboard</h1>
-    <p class="greeting-sub">
-        Track your assessment progress and next steps
+    <h1>Assessee Dashboard</h1>
+    <p class="greeting-sub" id="assesseeTypeText">
+        Welcome to your assessment dashboard
     </p>
 </div>
 
-<!-- STATUS CARDS -->
-<section class="stats-grid">
+<!-- TYPE INDICATOR -->
+<div class="card">
+    <strong>Assessee Type:</strong>
+    <span class="badge badge-blue" id="assesseeTypeBadge">Individual</span>
+</div>
+
+<!-- STATS -->
+<div class="stats-grid">
     <div class="stat-card">
-        <div class="stat-label">Current Assessment</div>
-        <div class="stat-value">Safety Audit</div>
-        <div class="stat-change positive">In Progress</div>
+        <h3>Assessments</h3>
+        <p class="stat-number">1</p>
     </div>
 
     <div class="stat-card">
-        <div class="stat-label">Documents Uploaded</div>
-        <div class="stat-value">5 / 8</div>
-        <div class="stat-change negative">3 pending</div>
+        <h3>Status</h3>
+        <p class="stat-number">In Review</p>
     </div>
 
     <div class="stat-card">
-        <div class="stat-label">Review Status</div>
-        <div class="stat-value">Pending</div>
-        <div class="stat-change">Waiting for assessor</div>
+        <h3>Current Score</h3>
+        <p class="stat-number">—</p>
     </div>
 
-    <div class="stat-card">
-        <div class="stat-label">Overall Progress</div>
-        <div class="stat-value">62%</div>
-        <div class="stat-change positive">On track</div>
+    <div class="stat-card team-only">
+        <h3>Team Members</h3>
+        <p class="stat-number">5</p>
     </div>
-</section>
+</div>
+
+<!-- ACTIONS -->
+<div class="card">
+    <h3 class="card-title">Quick Actions</h3>
+
+    <div class="two-col">
+        <a href="submit-assessment.html" class="btn btn-primary">
+            Submit / Update Assessment
+        </a>
+
+        <a href="results.html" class="btn btn-secondary">
+            View Results
+        </a>
+
+        <a href="uploaded-documents.html" class="btn btn-secondary">
+            Documents
+        </a>
+
+        <a href="progress.html" class="btn btn-secondary team-only">
+            Team Progress
+        </a>
+    </div>
+</div>
+
 
 <!-- CURRENT ASSESSMENT -->
 <section class="two-col">
@@ -121,3 +147,20 @@ loadComponent("footer","/components/footer.html");
 
 </body>
 </html>
+<script>
+const type = localStorage.getItem("assessee_type") || "individual";
+
+document.getElementById("assesseeTypeBadge").textContent =
+    type === "team" ? "Organisation / Team" : "Individual";
+
+document.getElementById("assesseeTypeText").textContent =
+    type === "team"
+        ? "Organisation-level assessment with team members"
+        : "Individual assessment submission";
+
+// Hide team-only elements
+if (type !== "team") {
+    document.querySelectorAll(".team-only")
+        .forEach(el => el.style.display = "none");
+}
+</script>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Virtual Site Review</title>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+</head>
+
+<body onload="protectPage('assessor')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+<div id="sidebar"></div>
+
+<main class="main-content">
+
+<div class="page-header">
+    <h1>Virtual Site Review</h1>
+    <p class="greeting-sub">
+        Conduct final verification through virtual inspection
+    </p>
+</div>
+
+<section class="card">
+    <ul class="simple-list">
+        <li><strong>Assessee:</strong> ABC Industries</li>
+        <li><strong>Review Type:</strong> Virtual Site Inspection</li>
+        <li><strong>Scheduled Date:</strong> 25 Jan 2026</li>
+    </ul>
+</section>
+
+<section class="card">
+    <div class="card-header">
+        <h3 class="card-title">Virtual Review Notes</h3>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Observations</label>
+        <textarea class="form-input" rows="4"
+            placeholder="Add observations from virtual review"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Upload Supporting Evidence</label>
+        <input type="file" class="form-input">
+    </div>
+</section>
+
+<section class="card">
+    <div class="card-header">
+        <h3 class="card-title">Final Recommendation</h3>
+    </div>
+
+    <select class="form-input">
+        <option>Recommend Approval</option>
+        <option>Recommend Rework</option>
+        <option>Not Recommended</option>
+    </select>
+
+    <div style="margin-top:1rem; text-align:right;">
+        <button class="btn btn-primary">Submit Recommendation</button>
+    </div>
+</section>
+
+</main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Review Assessment</title>
+
 <!-- CSS -->
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/dashboard.css">
@@ -13,8 +14,6 @@
 <script src="/assets/js/auth.js"></script>
 <script src="/assets/js/header.js"></script>
 <script src="/assets/js/sidebar.js"></script>
-<script src="/assets/js/charts.js"></script>
-<script src="/assets/js/tables.js"></script>
 </head>
 
 <body onload="protectPage('assessor')">
@@ -22,27 +21,135 @@
 <div id="navbar"></div>
 
 <div class="app-container">
-    <div id="sidebar"></div>
+<div id="sidebar"></div>
 
-    <main class="main-content">
+<main class="main-content">
+
+<!-- ================= HEADER ================= -->
 <div class="page-header">
-    <h1>Review Assessment</h1>
+    <h1>Assessment Review</h1>
     <p class="greeting-sub">
-        Evaluate submitted documents and provide your review
+        Review submitted assessment, assign scores and provide feedback
     </p>
 </div>
 
+<!-- ================= ASSESSMENT INFO ================= -->
 <section class="card">
     <ul class="simple-list">
         <li><strong>Assessee:</strong> ABC Industries</li>
         <li><strong>Assessment Type:</strong> Safety Audit</li>
+        <li><strong>Submission Round:</strong> 1st Document Review</li>
         <li><strong>Submitted On:</strong> 18 Jan 2026</li>
+    </ul>
+
+    <div class="badge badge-blue">
+        Uploaded documents are visible below
+    </div>
+</section>
+
+<!-- ================= DOCUMENTS ================= -->
+<section class="card">
+    <div class="card-header">
+        <h3 class="card-title">Submitted Documents</h3>
+    </div>
+
+    <ul class="file-list">
+        <li>📄 Safety_Audit_Report.pdf <button class="btn btn-small">View</button></li>
+        <li>📊 Risk_Analysis.xlsx <button class="btn btn-small">View</button></li>
     </ul>
 </section>
 
+<!-- ================= QUESTION WISE REVIEW ================= -->
 <section class="card">
     <div class="card-header">
-        <h3 class="card-title">Review Decision</h3>
+        <h3 class="card-title">Question-wise Evaluation</h3>
+        <p class="card-subtitle">Assign marks and comments per question</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Question</th>
+                <th>Max Marks</th>
+                <th>Self Score</th>
+                <th>Your Score</th>
+                <th>Stars</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Hazard identification and documentation</td>
+                <td>10</td>
+                <td>10</td>
+                <td>
+                    <input type="number" class="form-input" style="width:70px" value="4">
+                </td>
+                <td>⭐⭐⭐</td>
+                <td>
+                    <input type="text" class="form-input" placeholder="Add comment">
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Risk mitigation measures implemented</td>
+                <td>10</td>
+                <td>10</td>
+                <td>
+                    <input type="number" class="form-input" style="width:70px" value="4">
+                </td>
+                <td>⭐⭐⭐</td>
+                <td>
+                    <input type="text" class="form-input" placeholder="Add comment">
+                </td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Compliance with legal requirements</td>
+                <td>10</td>
+                <td>10</td>
+                <td>
+                    <input type="number" class="form-input" style="width:70px" value="5">
+                </td>
+                <td>⭐⭐⭐⭐</td>
+                <td>
+                    <input type="text" class="form-input" placeholder="Add comment">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ================= SUMMARY ================= -->
+<section class="card">
+    <div class="card-header">
+        <h3 class="card-title">Review Summary</h3>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Total Marks</h3>
+            <p class="stat-number">13 / 30</p>
+        </div>
+        <div class="stat-card">
+            <h3>Percentage</h3>
+            <p class="stat-number">43%</p>
+        </div>
+        <div class="stat-card">
+            <h3>Star Rating</h3>
+            <p class="stat-number">⭐⭐⭐</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FINAL DECISION ================= -->
+<section class="card">
+    <div class="card-header">
+        <h3 class="card-title">Final Decision</h3>
     </div>
 
     <div class="form-group">
@@ -55,16 +162,22 @@
     </div>
 
     <div class="form-group">
-        <label class="form-label">Remarks</label>
+        <label class="form-label">Final Remarks (Visible to Assessee)</label>
         <textarea class="form-input" rows="4"
-            placeholder="Add review comments"></textarea>
+            placeholder="Overall feedback for assessee"></textarea>
     </div>
 
-    <div style="display:flex; justify-content:flex-end;">
+    <div class="badge badge-orange">
+        Internal notes are NOT visible to assessee
+    </div>
+
+    <div style="display:flex; justify-content:flex-end; gap:1rem; margin-top:1rem;">
+        <button class="btn btn-secondary">Save Draft</button>
         <button class="btn btn-primary">Submit Review</button>
     </div>
 </section>
-    </main>
+
+</main>
 </div>
 
 <div id="footer"></div>

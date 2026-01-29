@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>E-Library Management</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/dashboard.css">
+<link rel="stylesheet" href="/assets/css/charts.css">
+<link rel="stylesheet" href="/assets/css/tables.css">
+
+<!-- JS -->
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+<script src="/assets/js/charts.js"></script>
+<script src="/assets/js/tables.js"></script>
+</head>
+
+<body onload="protectPage('admin')">
+
+<div id="navbar"></div>
+
+<div class="app-container">
+<div id="sidebar"></div>
+
+<main class="main-content">
+
+    <!-- ================= PAGE HEADER ================= -->
+    <div class="page-header">
+        <h1>E-Library Management</h1>
+        <p class="greeting-sub">
+            Upload, manage, price, and control access to learning resources
+        </p>
+    </div>
+
+    <!-- ================= STATS ================= -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Total Resources</h3>
+            <p class="stat-number">128</p>
+        </div>
+        <div class="stat-card">
+            <h3>Paid Resources</h3>
+            <p class="stat-number">42</p>
+        </div>
+        <div class="stat-card">
+            <h3>Free Resources</h3>
+            <p class="stat-number">86</p>
+        </div>
+        <div class="stat-card">
+            <h3>Total Downloads</h3>
+            <p class="stat-number">4,392</p>
+        </div>
+    </div>
+
+    <!-- ================= UPLOAD RESOURCE ================= -->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Upload New Resource</h3>
+        </div>
+
+        <div class="two-col">
+            <div class="form-group">
+                <label class="form-label">Resource Title</label>
+                <input type="text" class="form-input" placeholder="Enter title">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Category</label>
+                <select class="form-input">
+                    <option>Safety</option>
+                    <option>Compliance</option>
+                    <option>Operations</option>
+                    <option>Training</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Resource Type</label>
+                <select class="form-input">
+                    <option>PDF</option>
+                    <option>Word</option>
+                    <option>Excel</option>
+                    <option>PPT</option>
+                    <option>Video</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Access Type</label>
+                <select class="form-input">
+                    <option>Free</option>
+                    <option>Paid</option>
+                    <option>Members Only</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Price (INR)</label>
+                <input type="number" class="form-input" placeholder="0 for free">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Upload File</label>
+                <input type="file" class="form-input">
+            </div>
+        </div>
+
+        <div style="margin-top:1rem;">
+            <button class="btn btn-primary">Upload Resource</button>
+        </div>
+    </div>
+
+    <!-- ================= RESOURCE LIST ================= -->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Library Resources</h3>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Access</th>
+                    <th>Price</th>
+                    <th>Downloads</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Asbestos Safety Guidelines</td>
+                    <td>PDF</td>
+                    <td>Safety</td>
+                    <td>Free</td>
+                    <td>₹0</td>
+                    <td>1,204</td>
+                    <td><span class="badge badge-green">Active</span></td>
+                    <td>
+                        <button class="btn btn-small">View</button>
+                        <button class="btn btn-small btn-secondary">Edit</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Compliance Audit Checklist</td>
+                    <td>Excel</td>
+                    <td>Compliance</td>
+                    <td>Paid</td>
+                    <td>₹499</td>
+                    <td>312</td>
+                    <td><span class="badge badge-green">Active</span></td>
+                    <td>
+                        <button class="btn btn-small">View</button>
+                        <button class="btn btn-small btn-secondary">Edit</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Risk Assessment Training</td>
+                    <td>Video</td>
+                    <td>Training</td>
+                    <td>Members Only</td>
+                    <td>—</td>
+                    <td>87</td>
+                    <td><span class="badge badge-orange">Hidden</span></td>
+                    <td>
+                        <button class="btn btn-small">View</button>
+                        <button class="btn btn-small btn-secondary">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</main>
+</div>
+
+<div id="footer"></div>
+
+<script>
+loadComponent("navbar","/components/navbar.html");
+loadComponent("sidebar","/components/sidebar.html");
+loadComponent("footer","/components/footer.html");
+</script>
+
+</body>
+</html>
